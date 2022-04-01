@@ -9,7 +9,6 @@ Use Cases
   * Credential Cracking
   * Credential Stuffing
   * Phishing
-  * Phone Takeover (e.g. phone porting or SIM Swap)
   * Token Theft
 * Invalid Traffic (IVT) in Advertising
 * Ecommerce Fraud
@@ -19,7 +18,6 @@ Use Cases
   * Carding
   * Card Cracking
   * Cashing Out
-  * Check Kiting
   * Promotion Abuse
 * Sensitive Data Scraping
   * Scraping
@@ -71,13 +69,6 @@ See [OAT-008 Credential Stuffing](https://owasp.org/www-project-automated-threat
 Phishing is a type of social engineering where an attacker sends a fraudulent (e.g., spoofed, fake, or otherwise deceptive) message designed to trick a person into revealing sensitive information to the attacker or to deploy malicious software on the victim's infrastructure like ransomware ([https://en.wikipedia.org/wiki/Phishing](https://en.wikipedia.org/wiki/Phishing))
 
 
-### Phone Takeover (e.g. phone porting or SIM Swap)
-
-Bad actors bypass identity verification controls at mobile carriers to temporarily take control of a telephone number. Subsequently, they either port the telephone number to a new carrier and device that they control, or they initiate a SIM swap, wherein the target’s phone number is assigned to a new device which is also on the carrier’s network. These attacks can be initiated online, in store, over the phone. Telco’s typically ask for additional information to validate the abuser’s identity, however their controls may be inadequate. Other less common methods include call forwarding, voicemail compromise, compromise of a phone carrier website (to access text messages and selectively forward calls), and malware.
-
-Once a phone number is compromised, MFA can be bypassed, often resulting in huge monetary losses. This is the primary attack vector that we see in crypto-jacking, but it is also a common pattern in payments/account transfer fraud. 
-
-
 ### Token Theft
 
 Session credentials for authenticated users are traditionally stored as cookies, which are trivially extracted by malware running with user privileges. Services traditionally defend against this by associating certain invariant client properties (screen size, webGL renderer, etc) with a user’s cookie, and rejecting the session credential (forcing the use to re-authenticate) if it appears that the cookie is used on a new device.
@@ -126,13 +117,6 @@ Fraud in eCommerce channels typically takes advantage of compromised credit card
 Fraudsters frequently employ remailer services in order to cover their tracks. Remailers are innocent 3rd parties who provide an address for shipping and then send the goods on to another location.
 
 Also see [OAT-012 Cashing Out](https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-012_Cashing_Out.html).
-
-
-### Check Kiting
-
-Kiting is commonly defined as intentionally writing a check for a value greater than the account balance from an account in one bank, then writing a check from another account in another bank, also with non-sufficient funds, with the second check serving to cover the non-existent funds from the first account. The purpose of check kiting is to falsely inflate the balance of a checking account in order to allow written checks to clear that would otherwise bounce. If the account is not planned to be replenished, then the fraud is colloquially known as paper hanging.” - Wikipedia
-
-Check kiting and related forms of fraud have not historically relied on digital channels. However, with the emergence of online-only neobanks and other fintechs, this practice has become endemic to digital banking. The problem is further exacerbated when fintechs offer incentives, like accelerated deposit schedules, in order to get a competitive advantage. The problem is made worse because online banks like Chime often make debit cards available in digital channels. This means that anonymous users can load up account balances on these cards and then turn around and abuse them at merchants. 
 
 
 ### Promotion Abuse
