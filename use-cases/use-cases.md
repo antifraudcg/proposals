@@ -189,6 +189,27 @@ Attackers are sometimes after the developer’s intellectual property. It may ma
 Attackers seeking private data (e.g. bearer tokens, passwords, form entries, emails) belonging to a user will attempt to compromise the system holding this data. In addition to the mechanisms listed in the “account takeover” category, this may be possible through malware or exploitation of security bugs. 
 
 
+# Capabilities
+
+## Motivation
+
+Many of the heterogenous use cases listed above are rooted in common patterns of deception: For example, DoS, invalid ad traffic, and bulk account creation are amplification attacks (i.e. a small number of users presenting as many distinct users) with vastly different latency requirements (i.e. how much time we have to decide whether to reject or accept a request).
+
+Owners of these disparate use cases may ask a common set of questions, for example: Are these N requests coming from ~N distinct clients? Are intentional users making these requests? Are these users coordinating with the intent to deceive? 
+
+Such questions are answerable if the defender has the requisite “capabilities,” each of which provides a specific inference that may be enforced upon on its own, or in combination with inferences from complementary capabilities. These capabilities may be backed by a variety of sources of truth, including high-entropy client signals, hardware integrity checks, white-box cryptography, reputation ledgers, and other relevant technologies yet to be identified. 
+
+
+## Enumeration of Capabilities
+
+This section lists the capabilities that we have identified as useful for our key use cases. (Think of these as the requirements we have for our key use cases, deferring implementation opportunities or challenges to a subsequent design proposal)
+
+
+## Qualities of Capabilities
+
+Capabilities should be unambiguous and specific in their inference, avoiding broad qualitative verdicts in favor of specific attestations or refutations (e.g. a boolean verdict attesting to a specific fact). The utility of a capability for a specific use case may be contingent upon certain criteria, such as latency (how quickly can I get an answer?), accuracy (how many false positives/negatives can by use case tolerate?), friction (can I potentially interrupt the user, or do I need a passive assertion?), and others.
+
+
 # References
 * [OWASP automated threats](https://owasp.org/www-project-automated-threats-to-web-applications/)
 * [TAG IVT Taxonomy](https://f.hubspotusercontent40.net/hubfs/2848641/Invalid%20Traffic%20Taxonomy%20(IVT)/IVT%20Taxonomy%20v2.0.pdf)
