@@ -6,7 +6,7 @@ This repository is where [Anti-Fraud CG](https://antifraudcg.github.io/) proposa
 
 1. **Join the Community Group.** Before contributing a proposal, please [join the CG](https://www.w3.org/community/antifraud/join). This is to ensure that all contributions to the Community Group are covered by the [W3C Community Contributor License Agreement (CLA)](https://www.w3.org/community/about/agreements/cla/).
 
-2. **Proposing.** [File a new issue](https://github.com/antifraudcg/proposals/issues/new) in which you state the problem and proposal.
+2. **Proposing.** [File a new issue](https://github.com/antifraudcg/proposals/issues/new) in which you state the problem and proposal. Please check whether there are [current](https://github.com/antifraudcg/proposals/issues/) or [shelved proposals](SHELVED.MD) that match your proposal.
 
 3. **Community Discussion.** The CG will discuss the proposal and determine whether it should be adopted or needs further refinement and specification.
 
